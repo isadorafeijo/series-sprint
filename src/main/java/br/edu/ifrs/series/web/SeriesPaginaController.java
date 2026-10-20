@@ -5,12 +5,8 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
-
 import br.edu.ifrs.series.dao.SerieDAO;
 import br.edu.ifrs.series.dominio.Serie;
-
-
-
 
 @Controller
 public class SeriesPaginaController {

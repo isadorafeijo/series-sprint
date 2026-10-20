@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Séries</title>
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Séries Cadastradas</h1>
+            <a th:href="@{/paginas/series/nova}" class="btn-nova">+ Nova Série</a>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Plataforma</th>
+                    <th>Ano</th>
+                    <th>Gênero</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="serie : ${series}">
+                    <td th:text="${serie.nome}"></td>
+                    <td th:text="${serie.plataforma}"></td>
+                    <td th:text="${serie.anoLancamento}"></td>
+                    <td th:text="${serie.genero}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>

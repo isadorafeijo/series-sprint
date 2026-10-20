@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos</title>
+    <link rel="stylesheet" th:href="@{/css/estilo.css}">
+</head>
+<body>
+
+    <div class="container">
+        <div class="header">
+            <h1>Jogos Cadastrados</h1>
+            <a th:href="@{/paginas/jogos/novo}" class="btn-nova">+ Novo Jogo</a>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Desenvolvedora</th>
+                    <th>Ano</th>
+                    <th>Plataforma</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="jogo : ${jogos}">
+                    <td th:text="${jogo.nome}"></td>
+                    <td th:text="${jogo.desenvolvedora}"></td>
+                    <td th:text="${jogo.anoLancamento}"></td>
+                    <td th:text="${jogo.plataforma}"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</body>
+</html>
