@@ -29,6 +29,11 @@
                     <td th:text="${serie.plataforma}"></td>
                     <td th:text="${serie.anoLancamento}"></td>
                     <td th:text="${serie.genero}"></td>
+                    <td><a th:href="@{/paginas/series/{id}/editar(id=${serie.id})}">Editar</a>
+                    <form th:action="@{/paginas/series/{id}/remover(id=${serie.id})}" method="post">
+       			 		<button type="submit">Remover</button>
+    				</form>
+    				</td> 
                 </tr>
             </tbody>
         </table>
